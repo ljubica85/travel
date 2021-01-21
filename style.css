@@ -633,23 +633,38 @@ header nav > .nav-center .nav-links {
     display: block;
   }
 }
-#discover .content-container-slider {
+#discover {
+  position: relative;
+}
+#discover .arrow-slider {
+  background-color: black;
+  border: transparent;
+  padding: 1rem;
+  position: absolute;
+  cursor: pointer;
+}
+#discover .arrow-slider#left {
+  left: calc(50% + 3rem);
+  top: 50%;
+  z-index: 50;
+}
+#discover .arrow-slider#right {
+  right: 2rem;
+  top: 50%;
+  z-index: 50;
+}
+#discover .content-container {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  width: 85vw;
-  margin-left: auto;
-  position: relative;
-  overflow: hidden;
 }
-#discover .article {
+#discover .content-container .article {
   min-width: 50%;
-  padding: 8rem 2rem 8rem 0;
-  background-color: #FFFFFF;
-  margin-left: -1px;
-  z-index: 299;
 }
-#discover .article h3 {
+#discover .content-container .article p.pg {
+  width: 80%;
+}
+#discover .content-container .article h3 {
   margin-top: 2rem;
   color: #4A79BC;
   font-size: 2rem;
@@ -657,7 +672,7 @@ header nav > .nav-center .nav-links {
   position: relative;
   z-index: 2;
 }
-#discover .article h3::before {
+#discover .content-container .article h3::before {
   content: "Explore";
   position: absolute;
   font-size: 5.5rem;
@@ -665,28 +680,8 @@ header nav > .nav-center .nav-links {
   color: #F7F7F7;
   z-index: -1;
 }
-#discover .article p {
-  width: 40rem;
-}
 #discover #slider-container {
   margin: 5rem 0;
-}
-#discover #slider-container .arrow-slider {
-  background-color: black;
-  border: transparent;
-  padding: 1rem;
-  position: absolute;
-  cursor: pointer;
-}
-#discover #slider-container .arrow-slider#left {
-  left: calc(50% + 3rem);
-  top: 50%;
-  z-index: 50;
-}
-#discover #slider-container .arrow-slider#right {
-  right: 2rem;
-  top: 50%;
-  z-index: 50;
 }
 #discover .slider {
   display: flex;
@@ -739,33 +734,33 @@ header nav > .nav-center .nav-links {
   order: 2;
 }
 
-@media screen and (max-width: 1500px) {
-  #discover .content-container-slider .article p {
-    width: 35vw;
-  }
-}
-@media screen and (max-width: 1024px) {
-  #discover .content-container-slider .article p {
-    width: 40vw;
-  }
-}
 @media screen and (max-width: 768px) {
-  #discover .content-container-slider {
+  #discover .arrow-slider#left {
+    left: 2rem;
+    top: 60%;
+    z-index: 50;
+  }
+  #discover .arrow-slider#right {
+    right: 2rem;
+    top: 60%;
+    z-index: 50;
+  }
+  #discover .content-container {
     position: relative;
     flex-direction: column;
     width: 100vw;
-    padding: 5rem 0 0;
+    overflow: hidden;
   }
-  #discover .content-container-slider .article {
+  #discover .content-container .article {
     width: 100%;
     padding: 0;
     text-align: center;
   }
-  #discover .content-container-slider .article h3 {
+  #discover .content-container .article h3 {
     position: relative;
     z-index: 2;
   }
-  #discover .content-container-slider .article h3::before {
+  #discover .content-container .article h3::before {
     content: "Explore";
     position: absolute;
     font-size: 5.5rem;
@@ -773,20 +768,21 @@ header nav > .nav-center .nav-links {
     color: #F7F7F7;
     z-index: -1;
   }
-  #discover .content-container-slider .article p {
+  #discover .content-container .article p {
     margin: auto;
     width: 90%;
   }
-  #discover .content-container-slider #slider-container {
+  #discover .content-container #slider-container {
     width: 100%;
     display: flex;
+    margin: 0;
   }
-  #discover .content-container-slider #slider-container .arrow-slider#left {
+  #discover .content-container #slider-container .arrow-slider#left {
     left: 2rem;
     bottom: calc(200px + 5rem);
     top: auto;
   }
-  #discover .content-container-slider #slider-container .arrow-slider#right {
+  #discover .content-container #slider-container .arrow-slider#right {
     right: 2rem;
     bottom: calc(200px + 5rem);
     top: auto;

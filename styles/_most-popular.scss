@@ -1,60 +1,52 @@
 #discover {
-	.content-container-slider {
+	position: relative;
+	.arrow-slider {
+		background-color: black;
+		border: transparent;
+		padding: 1rem;
+		position: absolute;
+		cursor: pointer;
+		&#left {
+			left: calc(50% + 3rem);
+			top: 50%;
+			z-index: 50;
+		}
+		&#right {
+			right: 2rem;
+			top: 50%;
+			z-index: 50;
+		}
+	}
+	.content-container {
 		display: flex;
 		justify-content: flex-start;
 		align-items: center;
-		width: 85vw;
-		// max-width: 1900px;
-		margin-left: auto;
-		position: relative;
-		overflow: hidden;
-	}
-	.article {
-		min-width: 50%;
-		padding: 8rem 2rem 8rem 0;
-		background-color: $white;
-		margin-left: -1px;
-		z-index: 299;
-		h3 {
-			margin-top: 2rem;
-			color: $dark-blue;
-			font-size: 2rem;
-			font-weight: 600;
-			position: relative;
-			z-index: 2;
-			&::before {
-				content: "Explore";
-				position: absolute;
-				font-size: 5.5rem;
-				transform: translateX(-5px) translateY(-3rem);
-				color: $light;
-				z-index: -1;
+		.article {
+			min-width: 50%;
+			p.pg {
+				width:80%;
+			}
+			h3 {
+				margin-top: 2rem;
+				color: $dark-blue;
+				font-size: 2rem;
+				font-weight: 600;
+				position: relative;
+				z-index: 2;
+				&::before {
+					content: "Explore";
+					position: absolute;
+					font-size: 5.5rem;
+					transform: translateX(-5px) translateY(-3rem);
+					color: $light;
+					z-index: -1;
+				}
 			}
 		}
-		p {
-			width: 40rem;
-		}
 	}
+	
 	#slider-container {
-		margin: 5rem 0;
-		// position: relative;
-		.arrow-slider {
-			background-color: black;
-			border: transparent;
-			padding: 1rem;
-			position: absolute;
-			cursor: pointer;
-			&#left {
-				left: calc(50% + 3rem);
-				top: 50%;
-				z-index: 50;
-			}
-			&#right {
-				right: 2rem;
-				top: 50%;
-				z-index: 50;
-			}
-		}
+		margin: 5rem 0;		
 	}
 	.slider {
 		display: flex;
@@ -113,43 +105,25 @@
 		}
 	}
 }
-@media screen and (max-width: 1500px) {
-	#discover {
-		.content-container-slider {
-			.article {
-				p {
-					width: 35vw;
-				}
-			}
-		}
-	}
-}
-@media screen and (max-width: 1024px) {
-	#discover {
-		.content-container-slider {
-			.article {
-				p {
-					width: 40vw;
-				}
-			}
-
-		}
-		// #slider-container{
-		// 	.arrow-slider{
-		// 		&#left{
-		// 			left: calc(50% + 2rem);
-		// 		}
-		// 	}
-		// }
-	}
-}
 @media screen and (max-width: 768px) {
 	#discover {
-		.content-container-slider {
+		.arrow-slider {
+			&#left {
+				left: 2rem;
+				top: 60%;
+				z-index: 50;
+			}
+			&#right {
+				right: 2rem;
+				top: 60%;
+				z-index: 50;
+			}
+		}
+		.content-container {
 			position: relative;
 			flex-direction: column;
 			width: 100vw;
-			padding: 5rem 0 0;
+			overflow: hidden;
 			.article {
 				width: 100%;
 				padding: 0;
@@ -175,6 +149,7 @@
 			#slider-container {
 				width: 100%;
 				display: flex;
+				margin: 0;
 				.arrow-slider {
 					&#left {
 						left: 2rem;

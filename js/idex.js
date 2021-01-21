@@ -40,7 +40,7 @@ const slider= [
 $(document).ready(function(){
   const windowWidth = $(window).width()
   if(windowWidth<=768){
-    $("#available, #about, #contact").removeClass("section").css({"padding-top":"5rem", "padding-bottom":"5rem"})
+    $("#discover, #available, #about, #contact").removeClass("section").css({"padding-top":"5rem", "padding-bottom":"5rem"})
   }
 //Hero modal
   $("#watch").click(function(){
@@ -48,14 +48,10 @@ $(document).ready(function(){
   })
 
   $(".modal>button>img").click(function(){
-    // $('video')[0].pause()
     $('iframe')[0].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
     $(".modal").removeClass("open-modal")
   })
 
-  // if($('video')[0].play()){
-  //   $("#video-overlay").addClass("play")
-  // }
 
   $('#video-overlay').click(function() {
     $("#video-overlay").css({"display":"none"})
