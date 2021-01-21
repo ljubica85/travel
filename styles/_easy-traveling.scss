@@ -1,0 +1,237 @@
+#about {
+	.blue {
+		background-color: $dark-blue;
+		color: $white;
+		border-radius: 5px;
+		padding: 2rem;
+		margin: 4rem 0 10rem;
+		grid-template-areas: "t t t t t s s s s s s s";
+		position: relative;
+
+		.text-container {
+			grid-area: t;
+			width: 90%;
+			justify-self: start;
+			h2{
+				margin-bottom: 5rem;
+			}
+			h3 {
+				font-family: Montserrat-Bold;
+				font-size: 1.5rem;
+			}
+			h4 {
+				margin-top: 4rem;
+				margin-bottom: 1rem;
+			}
+			p {
+				line-height: 1.5rem;
+				font-size: 0.8rem;
+			}
+			button {
+				margin-bottom: 0;
+			}
+		}
+		.select {
+			background-color: $light;
+			width: 80%;
+			color: $dark-grey;
+			border-radius: 5px;
+			padding: 1rem;
+			position: absolute;
+			grid-area: s;
+			height: 140%;
+			margin: 0 4rem;
+			transform: scale(1.1) translateY(-10%);
+			.img-container{
+				height: 90%;
+				display: flex;
+				flex-direction: column;
+				justify-content: stretch;
+			}
+			h3 {
+				text-align: center;
+				margin: 1rem auto;
+				font-stretch: expanded;
+				font-size: 2rem;
+				width: 80%;
+			}
+			.img-card {
+				width: 100%;
+				flex:1 0 auto;
+				margin-bottom: 1rem;
+				border-radius: 5px;
+				font-family: Montserrat-Bold;
+				text-transform: uppercase;
+				color: $white;
+				font-size: 1rem;
+				display: flex;
+				justify-content: flex-end;
+				-webkit-box-shadow: 2px 2px 10px -6px rgba(0, 0, 0, 0.75);
+				-moz-box-shadow: 2px 2px 10px -6px rgba(0, 0, 0, 0.75);
+				box-shadow: 2px 2px 10px -6px rgba(0, 0, 0, 0.75);
+				.hidden{
+					display: none;
+				}
+				span {
+					display: block;
+					align-self: center;
+					margin-right: 2rem;
+					cursor: pointer;
+					img {
+						display: inline-block;
+						margin-left: 1rem;
+						margin-bottom: 3px;
+					}
+				}
+				&.open{
+					flex:9 0 auto;
+					.down-arrow{
+						transform: rotate(180deg);
+					}
+				}
+			}
+			#turkey {
+				background-image: linear-gradient(
+						to right,
+						rgba(0, 0, 0, 0),
+						rgba(0, 0, 0, 0.5)
+					),
+					url("images/popular/turkey.png");
+				background-position: center;
+				background-size: cover;
+			}
+			#russia {
+				background-image: linear-gradient(
+						to right,
+						rgba(0, 0, 0, 0),
+						rgba(0, 0, 0, 0.5)
+					),
+					url("images/popular/image7.png");
+				background-position: center;
+				background-size: cover;
+			}
+			#brazil {
+				background-image: linear-gradient(
+						to right,
+						rgba(0, 0, 0, 0),
+						rgba(0, 0, 0, 0.5)
+					),
+					url("images/popular/brazil.png");
+				background-position: center;
+				background-size: cover;
+			}
+			#china {
+				background-image: linear-gradient(
+						to right,
+						rgba(0, 0, 0, 0),
+						rgba(0, 0, 0, 0.5)
+					),
+					url("images/popular/china.png");
+				background-position: center;
+				background-size: cover;
+			}
+			#thailand {
+				background-image: linear-gradient(
+						to right,
+						rgba(0, 0, 0, 0),
+						rgba(0, 0, 0, 0.5)
+					),
+					url("images/popular/thailand.png");
+				background-position: center;
+				background-size: cover;
+			}
+		}
+	}
+	.plain-article {
+		padding-right: 5rem;
+		p {
+			font-stretch: expanded;
+			line-height: 1.5rem;
+			// &:last-child {
+			// 	padding-bottom: 5rem;
+			// }
+		}
+
+		h3,
+		h4 {
+			font-family: Montserrat-Regular;
+			margin: 3rem 0;
+		}
+		h3 {
+			font-size: 2rem;
+		}
+		h4 {
+			font-size: 1.5rem;
+		}
+		ul {
+			list-style-type: disc;
+			transform: translateX(1.2rem);
+			li::marker {
+				font-size: 1.3rem;
+				font-weight: 900;
+			}
+		}
+	}
+}
+@media screen and (max-width: 1024px) {
+	#about {
+		.blue {
+			width: 80vw;
+			text-align: center;
+			margin: auto;
+			display: flex;
+			flex-direction: column;
+
+			.text-container {
+				margin: 0 auto 10rem;
+				button {
+					margin-right: 0;
+				}
+			}
+			.select {
+				margin: 0 auto;
+				padding: 1rem 5rem;
+				position: relative;
+				transform: scale(1.15) translateY(-10%);
+				width: 100%;
+				.img-container{
+					height:30rem;
+				}
+			}
+		}
+		.plain-article {
+			padding: 0 2rem;
+		}
+	}
+}
+@media screen and (max-width: 768px) {
+	#about{
+		.blue{
+			width: 90vw;
+		}
+	}
+}
+@media screen and (max-width: 480px) {
+	#about {
+		.blue {
+			padding: 0;
+			width: 100%;
+			display: block;
+			border-radius: 0;
+			.text-container {
+				margin: 0 auto 3rem;
+				padding: 2rem;
+			}
+			.select {
+				width: 100%;
+				padding: 1rem 2rem;
+				position: relative;
+				transform: none;
+				border-radius: 0;
+			}
+		}
+		.plain-article {
+			padding: 2rem;
+		}
+	}
+}

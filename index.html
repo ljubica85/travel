@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Emakina.RS - travel site</title>
+		<link rel="stylesheet" href="style.css" />
+		<script src="./js/jquery-3.5.1.min.js"></script>
+	</head>
+	<body>
+		<header>
+			<nav>
+				<div class="nav-center">
+					<div class="nav-header">
+						<a href="#home">
+							<img src="./images/logo.png" alt="Logo of the company name"
+						/></a>
+						<div class="button-container">
+							<button class="search-button"></button>
+							<button class="nav-toggle"><img src="./images/icons/menu-icon.png" alt="Menu"></button>
+						</div>
+						
+					</div>
+
+					<ul class="links">
+						<li class="list-item active"><a href="#home">Home</a></li>
+						<li class="list-item"><a href="#discover">Discover</a></li>
+						<li class="list-item"><a href="#about">About us</a></li>
+						<li class="list-item"><a href="#contact">Contact</a></li>
+						<li class="list-item"><a href="#help">Help</a></li>
+					</ul>
+					<input type="text" name="search" id="search" />
+					<ul class="nav-links">
+						<li id="search-icon">
+							<a href="">
+							<img id="search-img" src="./images/icons/icon-search.png" alt="Search icon" /></a>
+						</li>
+						<li><a href="">Sign Up</a></li>
+						<li><a href="">Login</a></li>
+						<li id="lang">
+							<a href="#">
+							<span id="short">EN</span> 
+							<svg
+								version="1.1"
+								id="Capa_1"
+								xmlns="http://www.w3.org/2000/svg"
+								xmlns:xlink="5http://www.w3.org/1999/xlink"
+								x="0px"
+								y="0px"
+								viewBox="0 0 960 560"
+								enable-background="new 0 0 960 560"
+								xml:space="preserve"
+							>
+								<g id="Rounded_Rectangle_33_copy_4_1_">
+									<path
+										d="M480,344.181L268.869,131.889c-15.756-15.859-41.3-15.859-57.054,0c-15.754,15.857-15.754,41.57,0,57.431l237.632,238.937
+							c8.395,8.451,19.562,12.254,30.553,11.698c10.993,0.556,22.159-3.247,30.555-11.698l237.631-238.937
+							c15.756-15.86,15.756-41.571,0-57.431s-41.299-15.859-57.051,0L480,344.181z"
+									/>
+								</g>
+							</svg></a>
+						</li>
+					</ul>
+					<div class="submenu" style="left: 727.422px; top: 71.5px;">
+						<div class="submenu-center">
+							<a href="#" id="en" class="lang-link clicked">
+								English
+							</a>
+							<a href="#" id="de" class="lang-link">
+								German
+							</a>
+						</div>
+						
+				</div>
+				<div id="submenu-tab" style="top: 71.5px;">
+							
+					</div>
+			</nav>
+		</header>
+		<main>
+			<section id="home" class="section">
+				<div class="modal">
+					<button>
+					<img src="./images/icons/x.png" alt="Close modal">
+				</button>
+				<div class="video-container">
+					<img src="./images/Home_tablet_Layer3846.png" alt="Video overlay"  id="video-overlay"> 
+					<iframe id="video" width="520" height="290" src="https://www.youtube.com/embed/tgbNymZ7vqY?enablejsapi=1&version=3&controls=1" frameborder="0" allowfullscreen>
+					</iframe>
+					<!-- <video width="520" controls>
+						<source src="./assets/652333414.mp4" type="video/mp4">
+				</video> -->
+				</div>
+					
+				</div>
+				<div class="content-container">
+					<article class="article-hero">
+						<h1>Experience The World</h1>
+						<p class="explore">
+							Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero
+							minima libero tempore porro consequuntur excepturi tempora, nihil
+							nostrum temporibus explicabo!
+						</p>
+						
+						<div class="button-container">
+							<button class="btn white">Explore All</button>
+							<button id="watch" class="btn trans">
+								<svg
+									style="
+										width: 1.2rem;
+										height: 1.2rem;
+										vertical-align: top;
+										fill: currentColor;
+										overflow: hidden;
+									"
+									viewBox="0 0 1024 1024"
+									version="1.1"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										d="M341.333333 219.306667 341.333333 816.64 810.666667 517.973333 341.333333 219.306667Z"
+									/>
+								</svg>
+								Watch storie
+							</button>
+						</div>
+						<article class="comment">
+							<h3>Best Travel Guide</h3>
+							<p>
+								The communication was super easy and quick and the place looks
+								exactly like it does on the pictures the neighborhood is very
+							</p>
+						</article>
+						<div id="autor">
+								<img src="./images/author.png" alt="Author of comment" id="autor-img" />
+						<div class="autor">
+							<h3>Jamie Diaz</h3>
+							<p>Serbia</p>
+						</div>
+						</div>
+					
+					</article>
+				</div>
+			</section>
+			<section id="discover">
+				<div class="content-container-slider">
+					<article class="article">
+						<h3>Most popular destinations</h3>
+						<p>
+							Take a look at the Best Places to Travel in 2019 for additional
+							inspiration and if you already know where you're going this coming
+							year, share your plans with us on social media with
+							<a href="#" target="_blank">#TLBestPlaces</a> this link opens in a
+							new tab.
+						</p>
+						<button class="btn dark">Explore All</button>
+					</article>
+					<div id="slider-container">
+						<button id="left" class="arrow-slider">
+							
+							<img
+								src="./images/icons/arrow-left.png"
+								alt="Left arrow"
+       />
+							</button>
+							<div class="slider"> </div>
+      <button id="right" class="arrow-slider">
+							
+							<img src="./images/icons/arrow-right.png" alt="Right arrow" />
+						</button>
+					</div>
+					
+				</div>
+			</section>
+			<section id="available" class="section">
+				<div class="flex-container">
+				<h2 class="section-title">Available Summer Tours</h2>
+				<div class="content-container">
+					<article id="bus" class="card open">
+						<div class="desc-img">
+							<img src="./images/cards/bus.png" alt="Bus drawing" />
+						</div>
+						<div class="text">
+							<h4>City Hiking Tour (3 hours)</h4>
+							<p>Get on board of our Round City Cable Car Tour.</p>
+						</div>
+						<div class="dots">
+							<img src="./images/cards/dots.png" alt="Dots" class="vertical" />
+							<div class="img-horisontal">
+							</div>
+						</div>
+						
+						<div class="cutting">
+							<p class="price">$ 45.00</p>
+							<button class="btn btn-small">Book</button>
+						</div>
+					</article>
+
+					<article id="walk" class="card">
+						<div class="desc-img">
+							<img src="./images/cards/tourist.png" alt="Drawing of tourist" />
+						</div>
+						<div class="text">
+							<h4>City Hiking Tour (1.5 hours)</h4>
+							<p>Get on board of our Round City Cable Car Tour.</p>
+						</div>
+						<div class="dots">
+							<img src="./images/cards/dots.png" alt="Dots" class="vertical" />
+							<div class="img-horisontal">
+							</div>
+						</div>
+
+						<div class="cutting">
+							<p class="price">$ 45.00</p>
+							<button class="btn btn-small">Book</button>
+						</div>
+					</article>
+
+					<article id="map" class="card">
+						<div class="desc-img">
+							<img src="./images/cards/map.png" alt="Map drawing" />
+						</div>
+						<div class="text">
+							<h4>City Hiking Tour (3 hours)</h4>
+							<p>Get on board of our Round City Cable Car Tour.</p>
+						</div>
+						<div class="dots">
+							<img src="./images/cards/dots.png" alt="Dots" class="vertical" />
+							<div class="img-horisontal">
+							</div>
+						</div>
+						<div class="cutting">
+							<p class="price">$ 45.00</p>
+							<button class="btn btn-small">Book</button>
+						</div>
+					</article>
+					<article id="cable-car" class="card">
+						<div class="desc-img">
+							<img src="./images/cards/cable.png" alt="Cable car drawing" />
+						</div>
+						<div class="text">
+							<h4>City Hiking Tour (3 hours)</h4>
+							<p>Get on board of our Round City Cable Car Tour.</p>
+						</div>
+						<div class="dots">
+							<img src="./images/cards/dots.png" alt="Dots" class="vertical" />
+							<div class="img-horisontal">
+							</div>
+						</div>
+						<div class="cutting">
+							<p class="price">$ 45.00</p>
+							<button class="btn btn-small">Book</button>
+						</div>
+					</article>
+				</div>
+			</div>
+			</section>
+			<section id="about" class="section">
+				<div class="flex-container">
+				<h2 class="section-title">Traveling is Easy</h2>
+				<div class="content-container">
+					<article>
+						<div class="blue grid">
+							<article class="text-container">
+								<h3>All Services In One Round</h3>
+								<h4>Travel on beaches</h4>
+								<p>
+									Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae
+									fugiat cupiditate aperiam sapiente? Explicabo laboriosam
+									quidem nesciunt accusantium, voluptate in cupiditate aperiam
+									minima debitis officiis numquam distinctio veritatis minus
+									exercitationem eaque eligendi doloremque mollitia dolore nihil
+									vel? Pariatur, maxime, distinctio explicabo, dicta libero
+									natus numquam officia reprehenderit error similique eum.
+								</p>
+								<button class="btn dark">Read more</button>
+							</article>
+							<article class="select">
+								<h3>Discover popular places</h3>
+								<div class="img-container">
+									<div id="turkey" class="img-card">
+										<img
+											src="./images/icons/icon-x.png"
+											alt="Icon X"
+											class="hidden"
+										/>
+										<span
+											>turkey
+											<img
+												src="./images/icons/arrow-down.png"
+												alt="Arrow down"
+												class="down-arrow"
+											/>
+										</span>
+									</div>
+									<div id="russia" class="img-card">
+										<img
+											src="./images/icons/icon-x.png"
+											alt="Icon X"
+											class="hidden"
+										/>
+										<span
+											>russia
+											<img
+												src="./images/icons/arrow-down.png"
+												alt="Arrow down"
+												class="down-arrow"
+											/>
+										</span>
+									</div>
+									<div id="brazil" class="img-card">
+										<img
+											src="./images/icons/icon-x.png"
+											alt="Icon X"
+											class="hidden"
+										/>
+										<span
+											>brazil
+											<img
+												src="./images/icons/arrow-down.png"
+												alt="Arrow down"
+												class="down-arrow"
+											/>
+										</span>
+									</div>
+									<div id="china" class="img-card">
+										<img
+											src="./images/icons/icon-x.png"
+											alt="Icon X"
+											class="hidden"
+										/>
+										<span
+											>china
+											<img
+												src="./images/icons/arrow-down.png"
+												alt="Arrow down"
+												class="down-arrow"
+											/>
+										</span>
+									</div>
+									<div id="thailand" class="img-card">
+										<img
+											src="./images/icons/icon-x.png"
+											alt="Icon X"
+											class="hidden"
+										/>
+										<span
+											>thailand
+											<img
+												src="./images/icons/arrow-down.png"
+												alt="Arrow down"
+												class="down-arrow"
+											/>
+										</span>
+									</div>
+								</div>
+							</article>
+						</div>
+					</article>
+					<article class="plain-article">
+						<h3>I am page heading</h3>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit.
+							Doloremque libero provident, et consequatur reprehenderit vel
+							deserunt labore culpa a eligendi distinctio earum commodi nam
+							tempora natus, illo mollitia totam, magni voluptas repellat sit
+							amet ullam velit ullam velit error repellat quos totam ab iusto.
+							Praesentium similique sit modi mollitia totam, magni itaque. Ad
+							non, reprehenderit voluptas repellat ipsa sapiente. Check it
+							<a href="#">here</a>.
+						</p>
+						<ul>
+							<li>Illo ullam velit error repellat quos totam ab iusto.</li>
+							<li>
+								Consectetur adipisicing elit. Doloremque libero provident, et
+								consequatur reprehenderit vel deserunt labore culpa. Praesentium
+								similique sit modi mollitia totam, magni itaque. Ad non,
+								reprehenderit voluptas repellat ipsa sapiente.
+							</li>
+							<li>Doloremque libero provident, et consequatur.</li>
+						</ul>
+						<h4>I am page subheading</h4>
+						<p>
+							Ipsum dolor sit amet consectetur adipisicing elit. Doloremque
+							libero provident, et consequatur similique sit modi mollitia
+							totam, magni reprehenderit sit amet consectetur adipisicing elit.
+						</p>
+						<p>
+							Error repellat quos totam ab iusto. Praesentium similique sit modi
+							mollitia totam, magni itaque. Ad non, reprehenderit similique sit
+							modi error repellat quos totam ab iusto. Praesentium similique sit
+							modi ullam velit error repellat quos totam ab iusto. Praesentium
+							similique sit modi consectetur adipisicing elit ipsa sapiente.
+							Check it <a href="#">here</a>.
+						</p>
+					</article>
+				</div>
+			</div>
+			</section>
+			<section id="contact" class="section">
+				<div class="flex-container">
+				<h2 class="section-title">Contact Us</h2>
+				<div class="content-container grid contact">
+					<form action="#" class="form">
+						<div class="form-control">
+							<label for="full-name">Full name</label>
+							<input type="text" placeholder="John Doerr" />
+						</div>
+						<div class="form-control">
+							<label for="e-mail">E-mail</label>
+							<input type="email" placeholder="johndoerr@google.com" />
+						</div>
+						<div class="form-control">
+							<label for="message">Message</label>
+							<textarea
+								name="message"
+								id="message"
+								cols="30"
+								rows="10"
+								placeholder="Your message"
+							></textarea>
+						</div>
+						<div class="agree">
+						<input type="checkbox" name="agree" /><label for="agree"
+							>I agree to the <a href="#">Therms</a>,
+							<a href="#">Privacy Policy</a> and <a href="#">Fees</a></label
+						>
+					</div>
+						<button type="submit" class="btn dark">Send message</button>
+					</form>
+				</div>
+			</div>
+			</section>
+		</main>
+		<footer class="nav-footer">
+			<div class="content-container grid footer">
+				<article id="info">
+					<img src="./images/logo-footer.png" alt="logo" />
+					<p>Industry-leading travel app</p>
+					<p>
+						Aliquam viverra non risus eget auctor<br />
+						Praesent tincidunt nunc quis tellus congue
+					</p>
+					<p>
+						Made in Novi Sad,<br />
+						Serbia, SRB
+					</p>
+				</article>
+				<article id="features" class="foot-links">
+					<h3>Features</h3>
+					<ul>
+						<li>
+							<a href="#">Analitics</a>
+						</li>
+						<li>
+							<a href="#">Activity</a>
+						</li>
+						<li>
+							<a href="#">Content management</a>
+						</li>
+						<li>
+							<a href="#">Publishing</a>
+						</li>
+					</ul>
+				</article>
+				<article id="about" class="foot-links">
+					<h3>About</h3>
+					<ul>
+						<li>
+							<a href="#">Blog</a>
+						</li>
+						<li>
+							<a href="#">Pricing</a>
+						</li>
+						<li>
+							<a href="#">FAQ</a>
+						</li>
+						<li>
+							<a href="#">Product Changes</a>
+						</li>
+					</ul>
+				</article>
+				<article id="tools" class="foot-links">
+					<h3>Free Tools</h3>
+					<ul>
+						<li>
+							<a href="#">Instagram Aduit</a>
+						</li>
+						<li>
+							<a href="#">Instagram Brands Index</a>
+						</li>
+						<li>
+							<a href="#">Instagram Influencers Index</a>
+						</li>
+					</ul>
+				</article>
+			</div>
+		</footer>
+		<footer class="copy-footer">
+			<div class="content-container flex">
+				<span>© <a href="#">Company Name</a> All rights reserved</span>
+				<div class="icons">
+					<img src="./images/icons/twitter-logo.png" alt="Twitter logo" />
+					<img src="./images/icons/instagram-logo.png" alt="Instagram logo" />
+					<img src="./images/icons/facebook-logo.png" alt="Facebook logo" />
+				</div>
+			</div>
+		</footer>
+		<script src="./js/idex.js"></script>
+	</body>
+</html>

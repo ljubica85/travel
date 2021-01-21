@@ -1,0 +1,57 @@
+#contact {
+	background-color: $light;
+	background-image: url("images/contact.png"), url("images/contact2.png");
+	background-repeat: no-repeat, no-repeat;
+	background-position: 12rem 50%, 38rem 50%;
+	.contact {
+		grid-template-areas: ". . . . . . f f f f f f";
+		grid-row: auto;
+	}
+	
+	.form {
+		grid-area: f;
+		place-self: start end;
+	}
+	.agree{
+		display: flex;
+		justify-content: center;
+		input{
+			display: block;
+			width: 5%;
+		}
+		label{
+			display: block;
+			width: 95%;
+		}
+	}
+}
+@media screen and (max-width: 1750px) {
+	#contact {
+		background-position: 7rem 50%, 33rem 50%;
+		.contact {
+			grid-template-areas: ". . . f f f f f f f f f";
+		}
+		.content-container {
+			width: 90vw;
+			padding: 1rem;
+		}
+	}
+}
+@media screen and (max-width: 1200px) {
+	#contact {
+		background-image: none;
+		.contact {
+			grid-template-areas: ". f f f f f f f f f f .";
+		}
+		.content-container {
+			width: 100vw;
+			padding: 1rem;
+			.img-container {
+				display: none;
+			}
+			.form {
+				justify-self: center;
+			}
+		}
+	}
+}

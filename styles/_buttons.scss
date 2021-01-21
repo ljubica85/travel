@@ -1,0 +1,46 @@
+.btn {
+ display: inline-block;
+ padding: 1rem 1.8rem;
+ margin: 1rem 1rem 1rem 0;
+ border-radius: 5px;
+ font-family:  Montserrat-Medium;
+ font-size: 1rem;
+}
+.btn-small {
+	padding: 0.3rem 1.5rem;
+	background-color: $light-blue;
+	color: $white;
+	border: none;
+	&:hover {
+		background-color: $dark-blue;
+	}
+}
+.white {
+	background-color: $white;
+	color: $dark-grey;
+	border: 2px solid $white;
+	&:hover {
+		border: 2px solid $white;
+		color: $white;
+		background-color: transparent;
+	}
+}
+.trans {
+	border: 2px solid $white;
+	color: $white;
+	background-color: transparent;
+	&:hover {
+		background-color: $white;
+		color: $dark-grey;
+		border:  2px solid $white;
+	}
+}
+.dark {
+ background-color: $dark-grey;
+	color: $white;
+	border: none;
+	&:hover {
+  background-color: $light;
+  color: $grey;
+	}
+}
