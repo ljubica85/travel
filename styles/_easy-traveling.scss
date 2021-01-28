@@ -96,7 +96,7 @@
 						rgba(0, 0, 0, 0),
 						rgba(0, 0, 0, 0.5)
 					),
-					url("images/popular/turkey.png");
+					url("../images/popular/turkey.png");
 				background-position: center;
 				background-size: cover;
 			}
@@ -106,7 +106,7 @@
 						rgba(0, 0, 0, 0),
 						rgba(0, 0, 0, 0.5)
 					),
-					url("images/popular/image7.png");
+					url("../images/popular/image7.png");
 				background-position: center;
 				background-size: cover;
 			}
@@ -116,7 +116,7 @@
 						rgba(0, 0, 0, 0),
 						rgba(0, 0, 0, 0.5)
 					),
-					url("images/popular/brazil.png");
+					url("../images/popular/brazil.png");
 				background-position: center;
 				background-size: cover;
 			}
@@ -126,7 +126,7 @@
 						rgba(0, 0, 0, 0),
 						rgba(0, 0, 0, 0.5)
 					),
-					url("images/popular/china.png");
+					url("../images/popular/china.png");
 				background-position: center;
 				background-size: cover;
 			}
@@ -136,7 +136,7 @@
 						rgba(0, 0, 0, 0),
 						rgba(0, 0, 0, 0.5)
 					),
-					url("images/popular/thailand.png");
+					url("../images/popular/thailand.png");
 				background-position: center;
 				background-size: cover;
 			}
@@ -147,9 +147,6 @@
 		p {
 			font-stretch: expanded;
 			line-height: 1.5rem;
-			// &:last-child {
-			// 	padding-bottom: 5rem;
-			// }
 		}
 
 		h3,

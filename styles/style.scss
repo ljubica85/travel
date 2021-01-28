@@ -46,7 +46,6 @@ body {
 }
 .section{
 	display: flex;
-	// justify-content: center;
 	align-items: center;
 	min-height: 100vh;
 	overflow: hidden;
@@ -84,13 +83,10 @@ body {
   padding: 1rem;
 	}
 }
-// @media screen and (max-width: 1024px) {
-
-// 	.content-container {
-// 		width: 90vw;
-// 	}
-// }
 @media screen and (max-width: 768px) {
+	:root{
+		font-size: 14px;
+	}
 	.content-container {
   width: 100%;
   padding: 0;
@@ -100,6 +96,8 @@ body {
 	}
 }
 @media screen and (max-width: 480px) {
-	
+	:root{
+		font-size: 12px;
+	}
 }
 

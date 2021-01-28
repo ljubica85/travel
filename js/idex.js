@@ -51,7 +51,9 @@ $(document).ready(function(){
     $('iframe')[0].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
     $(".modal").removeClass("open-modal")
   })
-
+  if(windowWidth<=480){
+    $('#video').css({"max-width":`${windowWidth}px`})
+  }
 
   $('#video-overlay').click(function() {
     $("#video-overlay").css({"display":"none"})

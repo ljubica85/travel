@@ -37,15 +37,15 @@ table {
 
 @font-face {
   font-family: Montserrat-Regular;
-  src: url("styles/fonts/Montserrat-Regular.ttf");
+  src: url("./fonts/Montserrat-Regular.ttf");
 }
 @font-face {
   font-family: Montserrat-Medium;
-  src: url("styles/fonts/Montserrat-Medium.ttf");
+  src: url("./fonts/Montserrat-Medium.ttf");
 }
 @font-face {
   font-family: Montserrat-Bold;
-  src: url("styles/fonts/Montserrat-Bold.ttf");
+  src: url("./fonts/Montserrat-Bold.ttf");
 }
 header {
   background-color: transparent;
@@ -168,7 +168,7 @@ header nav > .nav-center .nav-links {
     height: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
   }
   header nav > .nav-center .nav-header a {
     display: flex;
@@ -206,14 +206,20 @@ header nav > .nav-center .nav-links {
   }
 }
 @media screen and (max-width: 768px) {
-  header nav > .nav-center #submenu-tab {
+  header nav {
+    height: 4rem;
+  }
+  header nav .nav-center {
+    padding: 1rem 0.5rem 0;
+  }
+  header nav .nav-center #submenu-tab {
     width: 100%;
   }
-  header nav > .nav-center #submenu-tab .links {
+  header nav .nav-center #submenu-tab .links {
     justify-content: center;
     align-items: center;
   }
-  header nav > .nav-center #submenu-tab .links li {
+  header nav .nav-center #submenu-tab .links li {
     width: 100%;
   }
 }
@@ -326,12 +332,15 @@ header nav > .nav-center .nav-links {
 }
 #home {
   position: relative;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0.2)), url("images/hero_desc.png");
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0.2)), url("../images/hero_desc.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
   color: #FFFFFF;
+}
+#home .content-container {
+  margin: 5rem auto;
 }
 #home .modal {
   display: none;
@@ -404,7 +413,7 @@ header nav > .nav-center .nav-links {
   z-index: 5;
 }
 #home .comment h3::before {
-  content: url("images/icons/eft-quote.png");
+  content: url("../images/icons/eft-quote.png");
   color: #FFFFFF;
   position: absolute;
   transform: translate(-50%, -50%);
@@ -465,9 +474,6 @@ header nav > .nav-center .nav-links {
   #home .article-hero #autor #autor-img {
     display: inline-block;
   }
-  #home .article-hero #autor .autor {
-    margin-bottom: auto;
-  }
   #home .article-hero .comment {
     justify-self: center;
   }
@@ -513,41 +519,9 @@ header nav > .nav-center .nav-links {
     margin-left: auto;
     margin-top: 2rem;
   }
-  #home .comment h3 {
-    margin: 1rem 0;
-    position: relative;
-    z-index: 5;
-  }
-  #home .comment h3::before {
-    content: url("images/icons/eft-quote.png");
-    color: #FFFFFF;
-    position: absolute;
-    transform: translate(-50%, -20%);
-    z-index: 0;
-    opacity: 0.5;
-  }
-  #home .comment p {
-    line-height: 1rem;
-    font-size: 0.8rem;
-  }
-  #home img {
-    display: block;
-    width: 2rem;
-    height: 2rem;
-    margin: 1rem 0 1rem auto;
-  }
   #home .autor {
     transform: none;
     text-align: right;
-  }
-  #home .autor h3 {
-    margin-bottom: 0;
-    margin-right: 0;
-    font-size: 1rem;
-  }
-  #home .autor p {
-    margin-bottom: 0;
-    font-size: 0.8rem;
   }
 }
 .submenu {
@@ -737,13 +711,10 @@ header nav > .nav-center .nav-links {
 @media screen and (max-width: 768px) {
   #discover .arrow-slider#left {
     left: 2rem;
-    top: 60%;
-    z-index: 50;
+    top: 65%;
   }
   #discover .arrow-slider#right {
-    right: 2rem;
-    top: 60%;
-    z-index: 50;
+    top: 65%;
   }
   #discover .content-container {
     position: relative;
@@ -756,60 +727,33 @@ header nav > .nav-center .nav-links {
     padding: 0;
     text-align: center;
   }
-  #discover .content-container .article h3 {
-    position: relative;
-    z-index: 2;
-  }
   #discover .content-container .article h3::before {
-    content: "Explore";
-    position: absolute;
-    font-size: 5.5rem;
     transform: translateX(15%) translateY(-3rem);
-    color: #F7F7F7;
-    z-index: -1;
   }
   #discover .content-container .article p {
     margin: auto;
-    width: 90%;
   }
   #discover .content-container #slider-container {
     width: 100%;
     display: flex;
-    margin: 0;
-  }
-  #discover .content-container #slider-container .arrow-slider#left {
-    left: 2rem;
-    bottom: calc(200px + 5rem);
-    top: auto;
-  }
-  #discover .content-container #slider-container .arrow-slider#right {
-    right: 2rem;
-    bottom: calc(200px + 5rem);
-    top: auto;
+    margin: 3rem 0 0;
   }
 }
 @media screen and (max-width: 480px) {
-  #discover .content-container-slider {
-    flex-direction: column;
-  }
-  #discover .content-container-slider .article {
-    width: 100%;
-  }
-  #discover .content-container-slider .article h3 {
+  #discover .content-container .article h3 {
     font-size: 1.5rem;
   }
-  #discover .content-container-slider .article h3::before {
-    content: "Explore";
-    position: absolute;
-    font-size: 5.5rem;
+  #discover .content-container .article h3::before {
     transform: translateX(-2%) translateY(-3rem);
-    color: #F7F7F7;
-    z-index: -1;
+  }
+  #discover #slider-container > .slider > .card-slide > img {
+    width: 200px;
+    height: 300px;
   }
 }
 #available {
   background-color: #87C5EC;
-  background-image: url("images/people-vector.png");
+  background-image: url("../images/people-vector.png");
   background-position: right center;
   background-repeat: no-repeat;
   color: #FFFFFF;
@@ -921,7 +865,7 @@ header nav > .nav-center .nav-links {
     justify-content: space-between;
     margin: 2rem auto;
     text-align: center;
-    padding: 2rem 0;
+    padding: 2rem 0.25rem;
   }
   #available .card .cutting {
     width: 100%;
@@ -938,9 +882,6 @@ header nav > .nav-center .nav-links {
     margin: 0 auto 1rem;
     padding: 0;
   }
-  #available .card .desc-img img {
-    width: 5rem;
-  }
   #available .card .h4 {
     margin: auto;
   }
@@ -948,7 +889,7 @@ header nav > .nav-center .nav-links {
     line-height: 1.5rem;
     display: block;
     width: 80%;
-    margin: 0 auto 0.5rem;
+    margin: 0 auto 2rem;
   }
   #available .card .dots {
     padding: 1rem 0;
@@ -1076,27 +1017,27 @@ header nav > .nav-center .nav-links {
   transform: rotate(180deg);
 }
 #about .blue .select #turkey {
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("images/popular/turkey.png");
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("../images/popular/turkey.png");
   background-position: center;
   background-size: cover;
 }
 #about .blue .select #russia {
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("images/popular/image7.png");
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("../images/popular/image7.png");
   background-position: center;
   background-size: cover;
 }
 #about .blue .select #brazil {
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("images/popular/brazil.png");
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("../images/popular/brazil.png");
   background-position: center;
   background-size: cover;
 }
 #about .blue .select #china {
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("images/popular/china.png");
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("../images/popular/china.png");
   background-position: center;
   background-size: cover;
 }
 #about .blue .select #thailand {
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("images/popular/thailand.png");
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("../images/popular/thailand.png");
   background-position: center;
   background-size: cover;
 }
@@ -1184,7 +1125,7 @@ header nav > .nav-center .nav-links {
 }
 #contact {
   background-color: #F7F7F7;
-  background-image: url("images/contact.png"), url("images/contact2.png");
+  background-image: url("../images/contact.png"), url("../images/contact2.png");
   background-repeat: no-repeat, no-repeat;
   background-position: 12rem 50%, 38rem 50%;
 }
@@ -1438,6 +1379,10 @@ body h2 {
   }
 }
 @media screen and (max-width: 768px) {
+  :root {
+    font-size: 14px;
+  }
+
   .content-container {
     width: 100%;
     padding: 0;
@@ -1445,6 +1390,11 @@ body h2 {
 
   .section-title {
     margin-bottom: 5rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  :root {
+    font-size: 12px;
   }
 }
 

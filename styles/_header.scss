@@ -123,7 +123,7 @@ header {
 				height: 100%;
 				display: flex;
 				justify-content: space-between;
-				align-items: center;
+				align-items: baseline;
 				a{
 					display: flex;
 					align-items: center;
@@ -168,7 +168,10 @@ header {
 }
 @media screen and (max-width: 768px) {
  header {
-		nav > .nav-center {
+		nav {
+			height: 4rem;
+			.nav-center {
+				padding: 1rem 0.5rem 0;
 			#submenu-tab{
 				width: 100%;
 				.links {
@@ -180,5 +183,6 @@ header {
 				}
 			}
 		}
+		} 
 	}
 }

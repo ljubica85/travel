@@ -110,13 +110,10 @@
 		.arrow-slider {
 			&#left {
 				left: 2rem;
-				top: 60%;
-				z-index: 50;
+				top: 65%;
 			}
 			&#right {
-				right: 2rem;
-				top: 60%;
-				z-index: 50;
+				top: 65%;
 			}
 		}
 		.content-container {
@@ -129,62 +126,37 @@
 				padding: 0;
 				text-align: center;
 				h3 {
-					position: relative;
-					z-index: 2;
 					&::before {
-						content: "Explore";
-						position: absolute;
-						font-size: 5.5rem;
 						transform: translateX(15%) translateY(-3rem);
-						color: $light;
-						z-index: -1;
 					}
 				}
 				p {
 					margin: auto;
-					width: 90%;
 				}
 			}
-			
 			#slider-container {
 				width: 100%;
 				display: flex;
-				margin: 0;
-				.arrow-slider {
-					&#left {
-						left: 2rem;
-						bottom: calc(200px + 5rem);
-						top: auto;
-
-					}
-					&#right {
-						right: 2rem;
-						bottom: calc(200px + 5rem);
-						top: auto;
-					}
-				}
+				margin: 3rem 0 0;
 			}
 		}
 	}
 }
 @media screen and (max-width: 480px) {
 	#discover {
-		.content-container-slider {
-			flex-direction: column;
+		.content-container {
 			.article {
-				width: 100%;
 				h3 {
 					font-size: 1.5rem;
 					&::before {
-						content: "Explore";
-						position: absolute;
-						font-size: 5.5rem;
 						transform: translateX(-2%) translateY(-3rem);
-						color: $light;
-						z-index: -1;
 					}
 				}
 			}
+		}
+		#slider-container > .slider > .card-slide > img {
+			width: 200px;
+			height: 300px;
 		}
 	}
 }
