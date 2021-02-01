@@ -484,6 +484,10 @@ header nav > .nav-center .nav-links {
     align-items: center;
     justify-content: center;
   }
+  #home .modal.open-modal button {
+    width: 100%;
+    padding-right: 1rem;
+  }
   #home .article-hero {
     display: flex;
     margin: auto;
@@ -591,17 +595,6 @@ header nav > .nav-center .nav-links {
     transition: all 0.3 linear;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     font-family: Montserrat-Bold;
-  }
-  #submenu-tab::before {
-    content: "";
-    display: block;
-    width: 0;
-    height: 0;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-bottom: 5px solid #FFFFFF;
-    position: absolute;
-    top: -5px;
   }
   #submenu-tab.show {
     display: block;
@@ -880,7 +873,6 @@ header nav > .nav-center .nav-links {
   #available .card .desc-img {
     display: block;
     margin: 0 auto 1rem;
-    padding: 0;
   }
   #available .card .h4 {
     margin: auto;
